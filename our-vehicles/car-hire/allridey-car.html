@@ -180,7 +180,7 @@ limitations under the License.
 
     <script
       custom-template="amp-mustache"
-      src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"
+      src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
       async=""
     ></script>
 
@@ -1317,7 +1317,7 @@ limitations under the License.
         -webkit-font-smoothing: antialiased;
       }
       .header-logo {
-          background-image: url(./../img/land-see/content/logo.png);
+          background-image: url(//m.wickedcampers.com.au/img/land-see/content/logo.png);
           margin-left: 0;
           background-repeat: no-repeat;
           background-position: center;
@@ -3010,7 +3010,7 @@ limitations under the License.
         ☰
       </div>
       <a
-        href="land-see.amp.html"
+        href="/"
         class="text-decoration-none inline-block mx-auto ampstart-headerbar-home-link"
       >
         <div class="ampstart-headerbar-title mx-auto header-logo"></div>
@@ -3072,34 +3072,24 @@ limitations under the License.
             <a class="ampstart-nav-link" href="stories.amp.html">Menu</a>
           </li>
 
-          <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/menu" height="330">
-            <template type="amp-mustache">
-              <li class="ampstart-nav-item ampstart-nav-dropdown relative">
-                <amp-accordion
-                  layout="container"
-                  disable-session-states=""
-                  class="ampstart-dropdown">
-                  <section expanded="">
-                  <header>Menu</header>
-                  <ul class="ampstart-dropdown-items list-reset m0 p0">
-                {{#value}}
-                  <!--mulai menu-->
-                   <li class="ampstart-dropdown-item">
-                          <a
-                            href="{{url}}"
-                            class="text-decoration-none"
-                            >{{title}}</a
-                          >
-                        </li>
-  
-                {{/value}}
-              </ul>
-              </section>        
-              </amp-accordion>
+          <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/menu" height="350">
+   <div overflow role="button" aria-label="Show more" class="list-overflow">
+   </div>
+   <template type="amp-mustache">
+      <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+         <ul class="ampstart-dropdown-items list-reset m0 p0">
+            {{#value}}
+            <!--mulai menu-->
+            <li class="ampstart-dropdown-item">
+               <a href="{{url}}" class="text-decoration-none"
+                  >{{title}}</a
+                  >
             </li>
-          
-            </template>
-          </amp-list>
+            {{/value}}
+         </ul>
+      </li>
+   </template>
+</amp-list>
 
       
           
@@ -3289,7 +3279,7 @@ limitations under the License.
               </div>
              
            
-        <p class="ampstart-caption pt1 pb3">{{description}}</p>
+        <p class="ampstart-caption pt1 pb3">{{{description}}}</p>
         <p></p>
         <div class="segment-title">Frequently Asked Questions</div>
         <div itemscope itemtype="https://schema.org/FAQPage">
@@ -3302,7 +3292,7 @@ limitations under the License.
             </div>
           </div>
           <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <h3 itemprop="name">Can I choose my campervan hire design? </h3>
+            <h3 itemprop="name">Can I choose my car hire design? </h3>
             <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
               <div itemprop="text">
                 Customers are welcome to put in a request for the design on the camper which we will try our best to accommodate if available. However as a lot of our hires are one way it is not guaranteed. Customers are also welcome to request a 'tame' van if travelling with children etc.
@@ -3310,10 +3300,10 @@ limitations under the License.
           </div>
         </div>
         <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h3 itemprop="name">What is the cheapest campervan hire in Australia? </h3>
+          <h3 itemprop="name">What is the cheapest car hire in Australia? </h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-              On average, one can hire a 2-berth campervan for $50 for a day. The price depends on the season and availability.
+              On average, one can hire a Wicked Van 2 for AUD $77.50 for a day. The price depends on the season and availability.
             </div>
           </div>
         </div>

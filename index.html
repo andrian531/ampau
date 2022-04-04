@@ -178,8 +178,8 @@ limitations under the License.
 
     <script
       custom-template="amp-mustache"
-      src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"
-      async=""
+      src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
+      async="" 
     ></script>
 
    
@@ -1258,7 +1258,7 @@ limitations under the License.
         -webkit-font-smoothing: antialiased;
       }
       .header-logo {
-          background-image: url(./img/land-see/content/logo.png);
+          background-image: url(//m.wickedcampers.com.au/img/land-see/content/logo.png);
           margin-left: 0;
           background-repeat: no-repeat;
           background-position: center;
@@ -3104,34 +3104,24 @@ li.suara-populer-feed span {
             <a class="ampstart-nav-link" href="stories.amp.html">Menu</a>
           </li>
 
-          <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/menu" height="330">
-            <template type="amp-mustache">
-              <li class="ampstart-nav-item ampstart-nav-dropdown relative">
-                <amp-accordion
-                  layout="container"
-                  disable-session-states=""
-                  class="ampstart-dropdown">
-                  <section expanded="">
-                  <header>Menu</header>
-                  <ul class="ampstart-dropdown-items list-reset m0 p0">
-                {{#value}}
-                  <!--mulai menu-->
-                   <li class="ampstart-dropdown-item">
-                          <a
-                            href="{{url}}"
-                            class="text-decoration-none"
-                            >{{title}}</a
-                          >
-                        </li>
-  
-                {{/value}}
-              </ul>
-              </section>        
-              </amp-accordion>
+          <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/menu" height="350">
+   <div overflow role="button" aria-label="Show more" class="list-overflow">
+   </div>
+   <template type="amp-mustache">
+      <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+         <ul class="ampstart-dropdown-items list-reset m0 p0">
+            {{#value}}
+            <!--mulai menu-->
+            <li class="ampstart-dropdown-item">
+               <a href="{{url}}" class="text-decoration-none"
+                  >{{title}}</a
+                  >
             </li>
-          
-            </template>
-          </amp-list>
+            {{/value}}
+         </ul>
+      </li>
+   </template>
+</amp-list>
 
       
           
@@ -3290,10 +3280,10 @@ li.suara-populer-feed span {
     </article>
   </main>
      
-      <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/vehicles/list" height="930" layout="fixed-height">
+      <!--<amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/vehicles/list" height="930" layout="fixed-height">
         <template type="amp-mustache">
          
-              <!--mulai isi-->
+              <!--mulai isi
               <article class="post">
               <section class="post-content">
                 <div class="list-wrapper">
@@ -3336,7 +3326,7 @@ li.suara-populer-feed span {
           
       
         </template>
-      </amp-list>
+      </amp-list>-->
      
 
 

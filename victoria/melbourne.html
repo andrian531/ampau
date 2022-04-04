@@ -180,7 +180,7 @@ limitations under the License.
 
     <script
       custom-template="amp-mustache"
-      src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"
+      src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
       async=""
     ></script>
 
@@ -1317,7 +1317,7 @@ limitations under the License.
         -webkit-font-smoothing: antialiased;
       }
       .header-logo {
-          background-image: url(./../img/land-see/content/logo.png);
+          background-image: url(//m.wickedcampers.com.au/img/land-see/content/logo.png);
           margin-left: 0;
           background-repeat: no-repeat;
           background-position: center;
@@ -2911,6 +2911,102 @@ limitations under the License.
         }
       }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Wicked Campers Australia",
+          "item": "https://m.wickedcampers.com.au"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Campervan Hire Victoria",
+          "item": "https://m.wickedcampers.com.au/victoria"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Campervan Hire Melbourne"
+        }]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoRental",
+        "image": [
+          "https://bookings.wickedcampers.com.au/newapi/assets/media/locations/melbourne.jpg",
+          "https://www.wickedcampers.com.au/assets/img/wickedwhite.png"
+         ],
+        "name": "Campervan Hire Melbourne",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "45 Bond St",
+          "addressLocality": "Ringwood",
+          "addressRegion": "VIC",
+          "postalCode": "3124",
+          "addressCountry": "Australia"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -42.829639840259134,
+          "longitude": 147.47789635604582
+        },
+        "url": "https://m.wickedcampers.com.au/victoria/melbourne.html",
+        "priceRange": "$",
+        "telephone": "+61 1800 24 68 69",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "15:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "11:00"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "How old do you have to be to hire a Campervan in Melbourne?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You need to be at least 18 years old to be able to hire a campervan in Australia. Yes you can hire a Wicked Camper just using a valid drivers license from your country. An International License is not required."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Can I choose my car hire design?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Customers are welcome to put in a request for the design on the camper which we will try our best to accommodate if available. However as a lot of our hires are one way it is not guaranteed. Customers are also welcome to request a 'tame' van if travelling with children etc."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What is the cheapest campervan hire in Australia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On average, one can hire a Wicked Van 2 for AUD $77.50 for a day. The price depends on the season and availability."
+            }
+          }]
+        }
+    </script>
   </head>
   <body class="land-see">
     <amp-animation id="recommendedSlideIn" layout="nodisplay">
@@ -2964,7 +3060,7 @@ limitations under the License.
         ☰
       </div>
       <a
-        href="land-see.amp.html"
+        href="/"
         class="text-decoration-none inline-block mx-auto ampstart-headerbar-home-link"
       >
         <div class="ampstart-headerbar-title mx-auto header-logo"></div>
@@ -3026,34 +3122,24 @@ limitations under the License.
             <a class="ampstart-nav-link" href="stories.amp.html">Menu</a>
           </li>
 
-          <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/menu" height="330">
-            <template type="amp-mustache">
-              <li class="ampstart-nav-item ampstart-nav-dropdown relative">
-                <amp-accordion
-                  layout="container"
-                  disable-session-states=""
-                  class="ampstart-dropdown">
-                  <section expanded="">
-                  <header>Menu</header>
-                  <ul class="ampstart-dropdown-items list-reset m0 p0">
-                {{#value}}
-                  <!--mulai menu-->
-                   <li class="ampstart-dropdown-item">
-                          <a
-                            href="{{url}}"
-                            class="text-decoration-none"
-                            >{{title}}</a
-                          >
-                        </li>
-  
-                {{/value}}
-              </ul>
-              </section>        
-              </amp-accordion>
+          <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/menu" height="350">
+   <div overflow role="button" aria-label="Show more" class="list-overflow">
+   </div>
+   <template type="amp-mustache">
+      <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+         <ul class="ampstart-dropdown-items list-reset m0 p0">
+            {{#value}}
+            <!--mulai menu-->
+            <li class="ampstart-dropdown-item">
+               <a href="{{url}}" class="text-decoration-none"
+                  >{{title}}</a
+                  >
             </li>
-          
-            </template>
-          </amp-list>
+            {{/value}}
+         </ul>
+      </li>
+   </template>
+</amp-list>
 
       
           
@@ -3220,11 +3306,11 @@ limitations under the License.
           </amp-iframe>
         </div>
            
-        <p class="ampstart-caption pt1 pb3">{{intro_detail}}</p>
+        <p class="ampstart-caption pt1 pb3">{{{intro_detail}}}</p>
         <p></p>
         <div itemscope itemtype="https://schema.org/FAQPage">
           <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <h3 itemprop="name">How old do you have to {{ post-title }}?</h3>
+            <h3 itemprop="name">How old do you have to be to hire a Campervan in {{ post-title }}?</h3>
             <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
               <div itemprop="text">
                 You need to be at least 18 years old to be able to hire a campervan in Australia. Yes you can hire a Wicked Camper just using a valid drivers license from your country. An International License is not required.
@@ -3243,18 +3329,11 @@ limitations under the License.
           <h3 itemprop="name">What is the cheapest campervan hire in Australia? </h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-              On average, one can hire a 2-berth campervan for $50 for a day. The price depends on the season and availability.
+              On average, one can hire a Wicked Van 2 for AUD $77.50 for a day. The price depends on the season and availability.
             </div>
           </div>
         </div>
-        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h3 itemprop="name">Do you have any suggestions for places to travel?</h3>
-          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">
-              Sure! Just look in our Trip Ideas section, there’s plenty of good ideas!
-            </div>
-          </div>
-        </div>
+        
        </div>
             <p></p>
             <p></p>

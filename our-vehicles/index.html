@@ -16,7 +16,7 @@ limitations under the License.
 <html ⚡="" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Australia Depot Locations - Wicked Campers Australia</title>
+    <title>Campervan Hire - Wicked Campers Australia</title>
     <meta name="description" content="Wicked Campers have 18 Rental Locations across Australia and New Zealand...and 46 Hire Locations around the World!">
     <meta name="keyword" content="Car hire Australia, car rental, cheap, rental car, Australian, Melbourne, Sydney, Brisbane, Adelaide, Cairns, Perth, Avis, Europcar, Hertz, Thrifty, drive, lowest car hire deals, car rental Australia">
     <meta name="news_keywords" content="campervan, campervan hire, campervan rental, campervan hire Adelaide, campervan rental Adelaide camper van, camper rental" />
@@ -179,7 +179,7 @@ limitations under the License.
 
     <script
       custom-template="amp-mustache"
-      src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"
+      src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
       async=""
     ></script>
 
@@ -1262,7 +1262,7 @@ limitations under the License.
         -webkit-font-smoothing: antialiased;
       }
       .header-logo {
-          background-image: url(./img/land-see/content/logo.png);
+          background-image: url(//m.wickedcampers.com.au/img/land-see/content/logo.png);
           margin-left: 0;
           background-repeat: no-repeat;
           background-position: center;
@@ -3101,34 +3101,24 @@ li.suara-populer-feed span {
             <a class="ampstart-nav-link" href="stories.amp.html">Menu</a>
           </li>
 
-          <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/menu" height="330">
-            <template type="amp-mustache">
-              <li class="ampstart-nav-item ampstart-nav-dropdown relative">
-                <amp-accordion
-                  layout="container"
-                  disable-session-states=""
-                  class="ampstart-dropdown">
-                  <section expanded="">
-                  <header>Menu</header>
-                  <ul class="ampstart-dropdown-items list-reset m0 p0">
-                {{#value}}
-                  <!--mulai menu-->
-                   <li class="ampstart-dropdown-item">
-                          <a
-                            href="{{url}}"
-                            class="text-decoration-none"
-                            >{{title}}</a
-                          >
-                        </li>
-  
-                {{/value}}
-              </ul>
-              </section>        
-              </amp-accordion>
+          <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/menu" height="350">
+   <div overflow role="button" aria-label="Show more" class="list-overflow">
+   </div>
+   <template type="amp-mustache">
+      <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+         <ul class="ampstart-dropdown-items list-reset m0 p0">
+            {{#value}}
+            <!--mulai menu-->
+            <li class="ampstart-dropdown-item">
+               <a href="{{url}}" class="text-decoration-none"
+                  >{{title}}</a
+                  >
             </li>
-          
-            </template>
-          </amp-list>
+            {{/value}}
+         </ul>
+      </li>
+   </template>
+</amp-list>
 
       
           
