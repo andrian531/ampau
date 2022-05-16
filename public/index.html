@@ -4115,7 +4115,7 @@ amp-img {
                     <h2 class="title-text">Our most popular locations</h2>
                   </div>
                 </div>
-                <div class="subtitle"> Discover a place that suits your kind of trip. </div>
+                <div class="subtitle">Discover a place that suits your kind of trip. </div>
               </div>
             </div>
             <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/location/list" height="221" layout="flex-item">
@@ -4128,12 +4128,47 @@ amp-img {
                           <div class="img-wrap">
                             <div class="img-component rect" style="">
                               {{#image}}
-                                <amp-img height="104" width="156" data-src="{{thumbs}}" class=" ls-is-cached lazyloaded " alt="tiket | Cathay Pacific" src="{{src}}"></amp-img>
+                                <amp-img height="104" width="156" data-src="{{thumbs}}" class=" ls-is-cached lazyloaded " alt="{{post-title}}" src="{{src}}"></amp-img>
                               {{/image}}
                             </div>
                           </div>
                           <div class="text-wrap">
                             <p class="title"> {{post-title}}</p>
+                            <p class="description">{{intro}}</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  {{/value}}
+                </div>
+              </template>
+            </amp-list>
+          </div>
+          <div class="potrait">
+            <div class="container">
+              <div class="title-area">
+                <div class="title">
+                  <div>
+                    <h2 class="title-text">Wicked Specials</h2>
+                  </div>
+                </div>
+                <div class="subtitle"> Uncover your destination even before you go. </div>
+              </div>
+            </div>
+            <amp-list src="https://bookings.wickedcampers.com.au/newapi/amp/special/list" height="221" layout="flex-item">
+              <template type="amp-mustache">
+                <div class="card-default">
+                  {{#value}}
+                    <div class="card-default-wrap">
+                      <div class="card">
+                        <a href="https://www.wickedcampers.com.au/specials/{{slug}}" data-from="Terkini">
+                          <div class="img-wrap">
+                            <div class="img-component rect">
+                                <amp-img height="104" width="156" data-src="{{thumbnail}}" class=" ls-is-cached lazyloaded" alt="{{title}}" src="{{thumbnail}}"></amp-img>
+                            </div>
+                          </div>
+                          <div class="text-wrap">
+                            <p class="title"> {{title}}</p>
                             <p class="description">{{intro}}</p>
                           </div>
                         </a>
