@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<html ⚡ lang="en">
+<html ⚡="" lang="en">
   <head>
     <title>Monkey Mia explorer - Wicked Campers Australia</title>
    <meta charset="utf-8">
@@ -54,13 +54,62 @@ limitations under the License.
     <link rel="apple-touch-icon" sizes="114x114" href="https://assets.suara.com/mobile/images/new-images/suara-icon-114x114.png">
     <link rel="icon" type="image/png" href="https://assets.suara.com/mobile/images/new-images/suara-icon-192x192.png" sizes="192x192">
     <link rel="icon" type="image/png" href="https://assets.suara.com/mobile/images/new-images/suara-icon-512x512.png" sizes="512x512">    
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Google%20Sans%20Display%3A400%2C500" as="fetch">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Google%20Sans%3A400%2C500" as="fetch">
+ 
     <link rel="preload" href="https://bookings.wickedcampers.com.au/newapi/assets/media/vehicles/galleries/bondi-safari-awd-3-5/1.jpg" as="image">
     <meta name="amp-google-client-id-api" content="googleanalytics" />
 
     <script async="" src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <link rel="stylesheet" href="../../fontawesome/css/all.min.css" type="text/css"/>
+
+    <style amp-boilerplate="">
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
 
     <script
       custom-element="amp-carousel"
@@ -123,66 +172,18 @@ limitations under the License.
       src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
       async=""
     ></script>
-    
 
-    <style amp-boilerplate="">
-      body {
-        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-      }
-      @-webkit-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-moz-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-ms-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-o-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-    </style>
+   
+
     <noscript><style amp-boilerplate="">
-      body {
-        -webkit-animation: none;
-        -moz-animation: none;
-        -ms-animation: none;
-        animation: none;
-      }
-    </style></noscript>
-
-    <style amp-custom="">
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript>
+<style amp-custom="">
       /*! Bassplate | MIT License | http://github.com/basscss/bassplate */
 
       /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -1313,7 +1314,7 @@ limitations under the License.
         -webkit-font-smoothing: antialiased;
       }
       .header-logo {
-          background-image: url(//m.wickedcampers.com.au/img/land-see/content/logo.png);
+          background-image: url(../../img/logo.png);
           margin-left: 0;
           background-repeat: no-repeat;
           background-position: center;
@@ -3036,7 +3037,7 @@ limitations under the License.
           class="text-decoration-none mr2 ampstart-headerbar-fixed-link"
         >
           <div class="ampstart-headerbar-icon-wrapper relative">
-            <a href="tel:1800246869">1800 24 68 69</a>
+            <i class="fas fa-user-headset mr-2" aria-hidden="true"></i> <a href="tel:1800246869">1800 24 68 69</a>
           </div>
         </a>
       </div>
