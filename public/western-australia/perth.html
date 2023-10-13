@@ -1368,6 +1368,22 @@ limitations under the License.
     .tombol a {
       text-decoration: none;
     }
+    .tombol-hire {
+        box-shadow: 0 2px 8px 0 rgb(53 64 90 / 20%);
+        padding: 10px 15px;
+        color: #fff;
+        background: #d20102;
+        text-align: center;
+        font-weight: 700;
+        font-size: 15px;
+        width: 50%;
+        margin-top: 10px;
+        margin: auto;
+        border-radius: 30px;
+      }
+      .tombol-hire a {
+        text-decoration: none;
+      }
       #content:target {
         margin-top: calc(0px - 3.5rem);
         padding-top: 3.5rem;
@@ -3279,7 +3295,7 @@ limitations under the License.
              
               <div class="land-see-post-category land-see-page-navigation inline-block pt1 underline caps">{{post-category}}</div>
              
-              <p class="ampstart-caption pt1 pb3">{{introx}}</p>
+              <p class="ampstart-caption pt1 pb3">{{{introx}}}</p>
               
               <div class="land-see-paging land-see-page-navigation mb4 flex flex-wrap">
                 {{#custom_data}}
@@ -3306,6 +3322,22 @@ limitations under the License.
            
         <p class="ampstart-caption pt1 pb3">{{{intro_detail}}}</p>
         <p></p>
+        <h3>We believe in the experience</h3>
+        <amp-carousel
+          width="450"
+          height="300"
+          layout="responsive"
+          type="slides"
+          role="region"
+          aria-label="Basic carousel"
+        >
+          {{#fun-gallery}}
+          <amp-img src="{{path_webp}}" width="450" height="300"> </amp-img>
+          {{/fun-gallery}}
+        </amp-carousel>
+        <div class="tombol-hire">
+          <a href="https://www.wickedcampers.com.au/campervan-hire-locations/{{post-category-urlx}}/{{post-url}}">Hire Now</a>
+        </div>
         <div itemscope itemtype="https://schema.org/FAQPage">
           <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <h3 itemprop="name">How old do you have to be to hire a Campervan in {{ post-title }}?</h3>
@@ -3336,12 +3368,15 @@ limitations under the License.
             <p></p>
             <p></p>
             <p></p>
-            {{/detail}}
           </main>
-          <br>
+          <br />
           <div class="tombol">
-            <a href="https://www.wickedcampers.com.au/campervan-hire-locations/western-australia/perth">Book Now</a>
+            <a
+              href="https://www.wickedcampers.com.au/campervan-hire-locations/{{post-category-urlx}}/{{post-url}}"
+              >Book Now</a
+            >
           </div>
+          {{/detail}}
         </template>
       </amp-list>
      
